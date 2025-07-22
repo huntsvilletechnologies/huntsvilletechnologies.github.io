@@ -6,18 +6,21 @@
   <title>Contact Us - Huntsville Technologies</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 <body>
+  <div class="site-content">
   <header class="header">
     <div class="container nav-container">
       <a href="index.html">
       <img src="logo-transparent-pngCroppedDark.png" alt="Huntsville Technologies Logo Cloud Design" style="height: 80; width: 380px;">
       </a>
       <nav>
-        <ul class="nav-menu">
+        <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <!--<li><a href="about.html">About</a></li>-->
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -40,25 +43,31 @@
       <p>We’d love to hear from you. Fill out the form and we’ll be in touch shortly.</p>
 
       <div class="contact-grid">
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="13eeb5fb-2865-46e9-9b06-1b179610822a">
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <input type="text" placeholder="Your Name" name="name" required>
+            <input type="email" placeholder="Your Email" name="email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <!-- Custom Confirmation / Success Page -->
+            <input type="hidden" name="redirect" value="https://www.huntsvilletechnologies.com/thanksForm.html"> -->
+            <button type="submit">Submit Form</button>
         </form>
 
         <div class="contact-info">
           <h3>Company Info</h3>
           <p><strong>Email:</strong> info@huntsvilletechnologies.com</p>
-          <p><strong>Phone:</strong> (00) 123-4567</p>
+          <p><strong>Phone:</strong> (000) 123-4567</p>
           <!--<p><strong>Address:</strong><br><br>Huntsville, AL 35801</p>-->
           <p><strong>Hours:</strong><br>Mon–Fri: 8:00AM–5:00PM</p>
         </div>
       </div>
     </div>
   </section>
-
+  </div>
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
@@ -97,5 +106,15 @@
     </div>
   </footer>
 
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+  
 </body>
 </html>
