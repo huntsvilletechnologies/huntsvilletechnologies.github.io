@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services - Huntsville Technologies</title>
+  <title>Contact Us - Huntsville Technologies</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon32x32.png">
@@ -20,8 +20,8 @@
         <div class="nav-toggle" id="nav-toggle">&#9776;</div>
         <ul class="nav-menu" id="nav-menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/services/services.html">Services</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -29,61 +29,39 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Our services</h2>
-      <p>At Huntsville Technologies we offer a wide range of services.</p>
+      <h2>Get in contact with us</h2>
+      <p>Let us manage your IT, get in contact with us below!</p>
     <div class="cta-group">
-      <a href="contact.html" class="btn">Let’s Talk</a>
       <a href="tel:2562078144" class="btn btn-phone">(256) 207-8144</a>
     </div>
-
   </section>
-  <section class="services-page">
+  <section class="contact">
     <div class="container">
-      <h2>Our Services</h2>
-      <p class="section-intro">From IT support to cloud solutions, we’ve got your business covered.</p>
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you. Fill out the form and we’ll be in touch shortly.</p>
 
-      <div class="service-vertical">
-        <div class="service-card">
-          <h3>Managed IT Support</h3>
-          <li>24/7 monitoring</li>
-          <li>Helpdesk support</li>
-          <li>On-site service</li>
-          <li>Remote service</li>
-          <li>Hardware support</li>
-          <li>Software support</li>
-          <p>We keep your systems secure, updated, and running smoothly.</p>
-        </div>
+      <div class="contact-grid">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="13eeb5fb-2865-46e9-9b06-1b179610822a">
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <input type="text" placeholder="Your Name" name="name" required>
+            <input type="email" placeholder="Your Email" name="email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <!-- Custom Confirmation / Success Page -->
+            <input type="hidden" name="redirect" value="https://www.huntsvilletechnologies.com/thanksForm.html">
+            <button type="submit">Submit Form</button>
+        </form>
 
-        <div class="service-card">
-          <h3>Cloud Services</h3>
-          <li>Migration</li>
-          <li>Data Storage</li>
-          <li>Data backup</li>
-          <p>Secure cloud solutions that improve collaboration and scalability while cutting infrastructure costs.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Cybersecurity</h3>
-          <li>Firewalls</li>
-          <li>Antivirus</li>
-          <li>Virus removal</li>
-          <li>Endpoint protection</li>
-          <p>Ensure best practices to keep your data and business safe.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Network Design & WiFi</h3>
-          <p>Reliable, high-speed networks from routers and switches to office Wi-Fi designed to support your daily operations.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Web Design & Development</h3>
-          <p>Custom, responsive websites that showcase your brand, integrate with your tools, and help generate leads or drive sales.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Consulting & IT Strategy</h3>
-          <p>Get expert advice on IT roadmaps, hardware/software procurement, and tech growth strategies tailored to your business.</p>
+        <div class="contact-info">
+          <h3>Company Info</h3>
+          <p><strong>Email:</strong><a href="mailto:info@huntsvilletechnologies.com">info@huntsvilletechnologies.com</a></p>
+          <p><strong>Phone:</strong><a href="tel:2562078144">(256) 207-8144</a></p>
+          <!--<p><strong>Address:</strong><br><br>Huntsville, AL 35801</p>-->
+          <p><strong>Hours:</strong><br>Mon–Thurs: 8:00AM–5:00PM </p>
+          <p>Fri: 8:00AM–12PM</p>
         </div>
       </div>
     </div>
@@ -102,9 +80,9 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="/services/services.html">Services</a></li>
           <!--<li><a href="about.html">About</a></li>-->
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
         </ul>
       </div>
 
@@ -127,7 +105,7 @@
     </div>
   </footer>
 
-  <script>
+<script>
   const toggle = document.getElementById('nav-toggle');
   const menu = document.getElementById('nav-menu');
 
@@ -136,5 +114,6 @@
   });
 </script>
 
+  
 </body>
 </html>
